@@ -1,5 +1,6 @@
 return require('packer').startup(
   function(use)
+    use 'tpope/vim-commentary'
     use 'wbthomason/packer.nvim'
     use 'nathanaelkane/vim-indent-guides'
     use {
@@ -25,5 +26,9 @@ return require('packer').startup(
       end
     })
     use 'folke/zen-mode.nvim'
+    use({
+		  'kyazdani42/nvim-tree.lua',
+		  requires = { 'kyazdani42/nvim-web-devicons' },
+	  })
   end
 )
