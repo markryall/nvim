@@ -1,0 +1,11 @@
+vim.api.nvim_create_user_command("CpPath", function()
+    local path = vim.fn.expand("%")
+    vim.fn.setreg("+", path)
+    vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {}) 
+
+vim.api.nvim_create_user_command("CpPathLine", function()
+    local path = vim.fn.expand("%") .. ":" .. vim.fn.line(".")
+    vim.fn.setreg("+", path)
+    vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {})
