@@ -1,7 +1,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { silent = true })
+vim.keymap.set("n", "<leader>pf", ":NvimTreeToggle<CR>", { silent = true })
 vim.opt.termguicolors = true
 
 require("nvim-tree").setup({

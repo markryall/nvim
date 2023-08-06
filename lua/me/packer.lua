@@ -1,5 +1,6 @@
-return require('packer').startup(
+require('packer').startup(
   function(use)
+    use 'christoomey/vim-tmux-navigator'
     use 'tpope/vim-commentary'
     use 'tpope/vim-surround'
     use 'wbthomason/packer.nvim'
@@ -20,17 +21,27 @@ return require('packer').startup(
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use({
-      'rose-pine/neovim',
-      as = 'rose-pine',
+      "lewis6991/gitsigns.nvim",
+      requires = "nvim-lua/plenary.nvim",
+    })
+    use({
+      'catppuccin/nvim',
+      as = 'catppuccin',
       config = function()
-        vim.cmd('colorscheme rose-pine')
+        vim.cmd("colorscheme catppuccin-frappe")
       end
     })
-    use 'folke/zen-mode.nvim'
+    use('vim-ruby/vim-ruby')
+    use('tpope/vim-rails')
+    use('tpope/vim-bundler')
+    use('tpope/vim-rake')
+    use('kana/vim-textobj-user')
+    use('nelstrom/vim-textobj-rubyblock')
+    use('folke/zen-mode.nvim')
     use({
-		  'kyazdani42/nvim-tree.lua',
-		  requires = { 'kyazdani42/nvim-web-devicons' },
-	  })
+      'kyazdani42/nvim-tree.lua',
+      requires = { 'kyazdani42/nvim-web-devicons' },
+    })
     use {
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v2.x',
@@ -48,3 +59,4 @@ return require('packer').startup(
     }
   end
 )
+
