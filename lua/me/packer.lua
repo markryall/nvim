@@ -5,6 +5,7 @@ require('packer').startup(
     use 'tpope/vim-surround'
     use 'wbthomason/packer.nvim'
     use 'nathanaelkane/vim-indent-guides'
+    use 'ixru/nvim-markdown'
     use {
       'nvim-telescope/telescope.nvim',
       tag = '0.1.2',

@@ -1,7 +1,5 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 vim.keymap.set("n", "<leader>pf", ":NvimTreeToggle<CR>", { silent = true })
+vim.keymap.set('n', '<leader>n', ':NvimTreeFindFileToggle<CR>')
 vim.opt.termguicolors = true
 
 require("nvim-tree").setup({
@@ -22,8 +20,6 @@ require("nvim-tree").setup({
     }
   },
 })
-
-vim.keymap.set('n', '<leader>n', ':NvimTreeFindFileToggle<CR>')
 
 vim.api.nvim_create_autocmd("BufEnter", {
   group = vim.api.nvim_create_augroup("NvimTreeClose", {clear = true}),
