@@ -19,7 +19,6 @@ require('packer').startup(
       end
     }
     use('nvim-treesitter/playground')
-    use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use({
       "lewis6991/gitsigns.nvim",
