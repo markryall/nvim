@@ -9,7 +9,19 @@ vim.keymap.set(
 )
 vim.keymap.set(
   "n",
+  "<Leader>[P",
+  ':let @+ = expand("%:p")<CR>',
+  { silent = true, noremap = true, desc = "copy full file path" }
+)
+vim.keymap.set(
+  "n",
   "<Leader>[l",
   ':let @+ = expand("%") . ":" . line(".")<CR>',
+  { silent = true, noremap = true, desc = "copy file path and line number" }
+)
+vim.keymap.set(
+  "n",
+  "<Leader>[L",
+  ':let @+ = expand("%:p") . ":" . line(".")<CR>',
   { silent = true, noremap = true, desc = "copy file path and line number" }
 )
